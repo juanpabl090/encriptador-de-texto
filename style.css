@@ -1,0 +1,26 @@
+head {
+    height: 10vh;
+}
+
+.logo {
+    margin: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    gap: 10px;
+    height: 88vh;
+}
+
+.output-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-text,
+.output-text {
+    border: 1px solid black;
+}
