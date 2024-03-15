@@ -1,3 +1,10 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
 head {
     height: 10vh;
 }
@@ -9,7 +16,6 @@ head {
 main {
     display: grid;
     grid-template-columns: 5fr 1fr;
-    gap: 10px;
     height: 88vh;
 }
 
@@ -20,7 +26,65 @@ main {
     align-items: center;
 }
 
-.input-text,
-.output-text {
-    border: 1px solid black;
+.input-text-box,
+.output-text-box {
+    display: grid;
+}
+
+.input-text-box-1,
+.input-text-box-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-text {
+    border: none;
+    color: #315cfd;
+}
+
+.input-text::placeholder{
+    color: #315cfd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.button-encriptar {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #315cfd;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: #315cfd;
+
+    font-weight: 550;
+}
+
+.button-desencriptar {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #315cfd;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-weight: 550;
+}
+
+.button-encriptar:hover {
+    background: #315cfd;
+    color: black;
+    font-size: 0.9em;
+}
+
+.button-desencriptar:hover {
+    background: white;
+    color: black;
+    font-size: 0.9em;
 }

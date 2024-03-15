@@ -6,25 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <script src="app.js"></script>
     <title>Encriptador de texto</title>
 </head>
+
 <body>
+
     <head>
-        <img src="assets/Logo.svg" alt="Logo" class="logo">
+        <img src="assets/Logo.svg" alt="Logo" class="logo" >
     </head>
     <main>
-        <div class="input-text">
-            <input type="text" class="input-text" placeholder="Ingrese el texto aqui">
-            <p><span><img src="assets/bi_exclamation-circle-fill.svg" alt="">Solo letras minúsculas y sin acentos</span></p>
-            <input type="button" value="Encriptar">
-            <input type="button" value="Desencriptar">
+        <div class="input-text-box">
+            <div class="input-text-box-1">
+                <textarea name="input-textarea" class="input-text" id="textarea-encriptador" cols="100" rows="10"
+                    placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="input-text-box-2">
+                <p class="advertencia"><span><img src="assets/bi_exclamation-circle-fill.svg" alt="">Solo letras
+                        minúsculas
+                        y sin acentos</span>
+                </p>
+                <div class="buttons">
+                    <input type="button" value="Encriptar" onclick="encriptador()" class="button-encriptar">
+                    <input type="button" value="Desencriptar" class="button-desencriptar">
+                </div>
+            </div>
         </div>
-        <div class="output-text">
-            <img src="assets/Muñeco.svg" alt="Muneco" class="img-muneco">
-            <p>Ningún mensaje fue encontrado</p>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <div class="output-text-box">
+            <img src="assets/Muñeco.svg" alt="Muneco" class="img-muneco" id="img-muneco">
+            <p id="text-output">
+                Ningún mensaje fue encontrado <br>
+                Ingresa el texto que desees encriptar o desencriptar.
+            </p>
         </div>
     </main>
 </body>
+
 </html>
