@@ -15,7 +15,7 @@ head {
 
 main {
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 3fr 1fr;
     height: 88vh;
 }
 
@@ -40,11 +40,18 @@ main {
 }
 
 .input-text {
+    text-align: center;
     border: none;
     color: #315cfd;
+    width: 100vh;
+    height: 50vh;
 }
 
-.input-text::placeholder{
+.img-muneco {
+    display: block;
+}
+
+.input-text::placeholder {
     color: #315cfd;
     text-align: center;
     vertical-align: middle;
@@ -54,27 +61,24 @@ main {
     outline: none;
 }
 
-.button-encriptar {
+.button-encriptar,
+.button-desencriptar,
+.button-copiar {
     width: 250px;
     height: 40px;
-    border: 1px solid #315cfd;
     border-radius: 10px;
     transition: all 0.3s;
     cursor: pointer;
-    background: #315cfd;
-
     font-weight: 550;
 }
 
-.button-desencriptar {
-    width: 250px;
-    height: 40px;
+.button-copiar {
+    display: none;
+}
+
+.button-encriptar {
     border: 1px solid #315cfd;
-    border-radius: 10px;
-    transition: all 0.3s;
-    cursor: pointer;
-    background: white;
-    font-weight: 550;
+    background: #315cfd;
 }
 
 .button-encriptar:hover {
@@ -83,8 +87,66 @@ main {
     font-size: 0.9em;
 }
 
-.button-desencriptar:hover {
+.button-desencriptar:hover,
+.button-copiar:hover {
     background: white;
     color: black;
     font-size: 0.9em;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    /* Agregar transición para la propiedad opacity */
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1114px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input-text {
+        color: #315cfd;
+        width: 30vh;
+        height: 10vh;
+    }
+
+    .input-text::placeholder {
+        color: #315cfd;
+    }
+
+    .buttons {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .output-text-box {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }

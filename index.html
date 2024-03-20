@@ -17,14 +17,15 @@
 <body>
 
     <head>
-        <img src="assets/Logo.svg" alt="Logo" class="logo" >
+        <img src="assets/Logo.svg" alt="Logo" class="logo">
     </head>
     <main>
         <div class="input-text-box">
             <div class="input-text-box-1">
-                <textarea name="input-textarea" class="input-text" id="textarea-encriptador" cols="100" rows="10"
+                <textarea name="input-textarea" class="input-text" id="textarea-encriptador" 
                     placeholder="Ingrese el texto aqui"></textarea>
             </div>
+            
             <div class="input-text-box-2">
                 <p class="advertencia"><span><img src="assets/bi_exclamation-circle-fill.svg" alt="">Solo letras
                         minúsculas
@@ -32,16 +33,20 @@
                 </p>
                 <div class="buttons">
                     <input type="button" value="Encriptar" onclick="encriptador()" class="button-encriptar">
-                    <input type="button" value="Desencriptar" class="button-desencriptar">
+                    <input type="button" value="Desencriptar" onclick="desencriptar()" class="button-desencriptar">
                 </div>
             </div>
         </div>
         <div class="output-text-box">
             <img src="assets/Muñeco.svg" alt="Muneco" class="img-muneco" id="img-muneco">
+            <div class="notification" id="notification">
+                texto copiado!
+            </div>
             <p id="text-output">
                 Ningún mensaje fue encontrado <br>
                 Ingresa el texto que desees encriptar o desencriptar.
             </p>
+            <input type="button" value="copiar" onclick="copiarTexto()" class="button-copiar" id="copiar">
         </div>
     </main>
 </body>
